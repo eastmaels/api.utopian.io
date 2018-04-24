@@ -18,14 +18,6 @@ router.route('/top')
 router.route('/moderator')
     .get(processModeratorQueryParams,postCtrl.moderator);
 
-router.route('/byid/:postId')
-  .get(postCtrl.getPostById);
-
-router.route('/edit')
-  .post(requireAuth,
-        validate(paramValidation.editPost),
-        postCtrl.edit);
-
 router.route('/:author/:permlink')
   .get(postCtrl.get)
   .put(requireAuth, loadMod, postCtrl.update);

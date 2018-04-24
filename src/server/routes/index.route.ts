@@ -16,6 +16,7 @@ import faqRoutes from './faq.route';
 import ruleRoutes from './rule.route';
 import uploadRoutes from './upload.route';
 import apikeyRoutes from './key.route';
+import notificationsRoutes from './notifications.route';
 
 const router = express.Router(); // eslint-disable-line new-cap
 
@@ -54,5 +55,7 @@ router.use('/rules', requireAPIKey, ruleRoutes)
 router.use('/upload', uploadRoutes);
 
 router.use('/apikey', apikeyRoutes);
+
+router.use('/notifications', notificationsRoutes);
 
 export default router;
