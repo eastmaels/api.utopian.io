@@ -386,7 +386,9 @@ function list(req, res, next) {
     let sort: any = { created: -1 };
     let select: any = {}
 
-    let query: any = {};
+    let query: any = {
+        deleted: { $ne: true }
+    };
 
     if (moderator !== 'any' && filterBy !== 'review') {
         query = {
@@ -559,7 +561,9 @@ async function browse(req, res, next) {
 
     if (limit > 100) limit = 100;
 
-    let query: any = {};
+    let query: any = {
+        deleted: { $ne: true }
+    };
     let select: any = {};
     let sortQuery: any = {
         'created': -1,

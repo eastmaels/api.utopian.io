@@ -78,32 +78,6 @@ export default {
 			],
 		},
 		{
-			question: "Is the proposal realistic?",
-			question_id: 'ideas-3',
-			answers: [
-				{
-					answer: "Yes, it can definitely be achieved and is important enough to warrant the developers attention and time.",
-					answer_id: 'ideas-3-a-1',
-					value: 10,
-				},
-				{
-					answer: "Yes, it can definitely be achieved, but is not likely to get noticed by the development team immediately.",
-					answer_id: 'ideas-3-a-2',
-					value: 8,
-				},
-				{
-					answer: "It can be achieved theoretically, but no open source solutions to this problem have been suggested previously.",
-					answer_id: 'ideas-3-a-3',
-					value: 4,
-				},
-				{
-					answer: "No, it’s impossible to achieve.",
-					answer_id: 'ideas-3-a-4',
-					value: 0,
-				},
-			],
-		},
-		{
 			question: "What is the potential impact of the change proposed on the usability of the project?",
 			question_id: 'ideas-4',
 			answers: [

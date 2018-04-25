@@ -36,7 +36,7 @@ export default {
 					value: 35,
 				},
 				{
-					answer: "This contribution adds some value to the project and/or open source ecosystem. ",
+					answer: "This contribution adds significant value to the project and/or open source ecosystem. ",
 					answer_id: 'dev-2-a-2',
 					value: 28,
 				},

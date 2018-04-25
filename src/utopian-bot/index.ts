@@ -54,7 +54,7 @@ const queryStaffPick = {
 const queryPosts = {
     'json_metadata.moderator.flagged': { $ne : true },
     'json_metadata.score': { $exists: true, $ne : null},
-    'json_metadata.total_influence': { $exists: true, $ne : null},
+    'json_metadata.total_influence': { $exists: true, $ne : null, $gt: 0},
     author: {$ne: botAccount},
     'active_votes.voter': {$ne: botAccount},
     created: {
@@ -181,7 +181,7 @@ async function run() {
         const totalInfluence = post.json_metadata.total_influence;
         const reviewed = post.json_metadata.moderator && post.json_metadata.moderator.reviewed === true || false;
 
-        if (reviewed || (score >= 80 && totalInfluence && totalInfluence > 60)) {
+        if (totalInfluence && (reviewed || (score >= 80 && totalInfluence >= 60))) {
             const processedPost = processPost(post);
             processedPosts.push(processedPost);
         }
