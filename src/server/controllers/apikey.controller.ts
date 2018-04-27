@@ -30,7 +30,8 @@ function list(req, res, next) {
     apigateway.getApiKey(params, function (err, data) {
         if (err) {
             res.json({
-                valid: false
+                valid: false,
+                err: err
             });
         }
         else {

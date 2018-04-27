@@ -79,9 +79,9 @@ if (fs.existsSync('bot.log')) {
     fs.unlinkSync('bot.log');
 }
 
-async function exit() {
+async function exit(skipStats = false) {
     let prefix = random.generate().toLocaleLowerCase();
-    if (!test) {
+    if (!test && !skipStats) {
         Stats.get().then(stats => {
             stats.bot_is_voting = false;
             stats.save().then(() => {
@@ -98,7 +98,7 @@ async function exit() {
         });
     }
 
-    if (test) {
+    if (test || skipStats) {
         conn.close();
         process.exit(0);
     }
@@ -119,37 +119,45 @@ function logVote (postToVote, usedVotingPower, index)  {
 async function run() {
     const votingPower = await checkVotingPower(botAccount);
     const stats: any = await getStats();
-    const SC: any = await prepareSteemConnect();
     const processedPosts = Array();
 
     if (!botAccount) {
         console.log("error", "No bot account was set.");
-        exit();
+        return exit();
     }
 
     if (!refreshToken) {
         console.log("error", "No refresh token was set.");
-        exit();
+        return exit();
     }
 
     if (!secret) {
         console.log("error", "No app secret was set.");
-        exit();
+        return exit();
     }
 
-    if (!votingPower || !stats || !SC) {
+    if (!votingPower || !stats) {
         console.log("info", "Something went wrong. Retrying.");
-        run();
+        return run();
     }
 
-    if (votingPower < 99 && !forced && !test) {
+    if (votingPower < 9900 && !forced && !test) {
         console.log("info", "Voting power not enough. Can't vote.");
-        exit();
+        return exit();
     }
 
     if (stats.bot_is_voting === true && !test) {
         console.log("info", "Bot is already voting.");
-        exit();
+        return exit(true);
+    }
+
+    const SC: any = await prepareSteemConnect();
+
+    console.log("info", votingPower);
+
+    if (!SC) {
+        console.log("info", "Something went wrong. Retrying.");
+        return run();
     }
 
     if (!test) {

@@ -7,17 +7,17 @@ export default {
 				{
 					answer: "The quality of the post is fantastic.",
 					answer_id: 'blog-1-a-1',
-					value: 20,
+					value: 25,
 				},
 				{
-					answer: "The post is of very good quality.",
+					answer: "The post is of decent quality, but not spectacular in any way.",
 					answer_id: 'blog-1-a-2',
-					value: 16,
+					value: 20,
 				},
 				{
 					answer: "The post is poorly written and/or formatted, but readable.",
 					answer_id: 'blog-1-a-3',
-					value: 6,
+					value: 8,
 				},
 				{
 					answer: "The post is really hard to read and the content is barely understandable.",
@@ -121,7 +121,7 @@ export default {
 				{
 					answer: "It is the first post from the author.",
 					answer_id: 'blog-5-a-3',
-					value: 3,
+					value: 4,
 				},
 				{
 					answer: "The post is not a part of any series..",
@@ -189,17 +189,17 @@ export default {
 				{
 					answer: "It is clear that they are closely familiar with the project and its details.",
 					answer_id: 'blog-8-a-1',
-					value: 15,
+					value: 10,
 				},
 				{
 					answer: "The author offers some valuable insights about the project.",
 					answer_id: 'blog-8-a-2',
-					value: 11.25,
+					value: 7,
 				},
 				{
 					answer: "Most of the blog post contains information gathered from other sources.",
 					answer_id: 'blog-8-a-3',
-					value: 4.5,
+					value: 3,
 				},
 				{
 					answer: "The author knows only little or nothing about the project.",

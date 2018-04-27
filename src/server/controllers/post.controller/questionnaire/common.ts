@@ -5,12 +5,12 @@ export default {
 			question_id: 'c-1',
 			answers: [
 				{
-					answer: "The quality of the post is fantastic.",
+					answer: "The post is of very high quality.",
 					answer_id: 'c-1-a-1',
 					value: 10,
 				},
 				{
-					answer: "The post is of very good quality.",
+					answer: "The post is of decent quality, but not spectacular in any way.",
 					answer_id: 'c-1-a-2',
 					value: 7,
 				},
@@ -38,12 +38,12 @@ export default {
 				{
 					answer: "This contribution adds significant value to the open source community and ecosystem, or is of critical importance to the specific project.",
 					answer_id: 'c-2-a-2',
-					value: 18,
+					value: 16,
 				},
 				{
 					answer: "This contribution adds some value to the open source community and ecosystem or is only valuable to the specific project.",
 					answer_id: 'c-2-a-3',
-					value: 11,
+					value: 8,
 				},
 				{
 					answer: "This contribution adds no value to the open source community and ecosystem or the specific project.",

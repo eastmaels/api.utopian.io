@@ -4,7 +4,7 @@ import * as Promise from 'bluebird';
 import * as path from 'path';
 import * as random from 'randomstring';
 
-let bucket = "utopian-cdn";
+let bucket = "utopiancdn";
 
 const awsS3Client = new AWS.S3({
     region: 'eu-central-1',

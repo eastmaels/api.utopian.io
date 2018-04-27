@@ -41,9 +41,11 @@ export async function prepareSteemConnect() {
   const refreshToken = process.env.REFRESH_TOKEN;
   const secret = process.env.CLIENT_SECRET;
 
+  console.log("info", "contacting SC");
+
   return new Promise((resolve, reject) => {
     request
-        .get(`${scBase}/api/oauth2/token?refresh_token=${refreshToken}&client_secret=${secret}&scope=vote,comment,comment_delete,comment_options,custom_json,claim_reward_balance,offline`)
+        .get(`${scBase}/api/oauth2/token?refresh_token=${refreshToken}&client_secret=${secret}&scope=vote,comment,delete_comment,comment_options,custom_json,claim_reward_balance,offline`)
         .end((err, res) => {
           if (!res.body.access_token) {
             console.log("error", "Could not get access token", res);

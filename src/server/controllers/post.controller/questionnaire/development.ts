@@ -5,14 +5,14 @@ export default {
 			question_id: 'dev-1',
 			answers: [
 				{
-					answer: "The quality of the post is fantastic.",
+					answer: "The post is of very high quality.",
 					answer_id: 'dev-1-a-1',
 					value: 10,
 				},
 				{
-					answer: "The post is of very good quality. ",
+					answer: "The post is of decent quality, but not spectacular in any way.",
 					answer_id: 'dev-1-a-2',
-					value: 8,
+					value: 7,
 				},
 				{
 					answer: "The post is poorly written and/or formatted, but readable.",
@@ -38,12 +38,12 @@ export default {
 				{
 					answer: "This contribution adds significant value to the project and/or open source ecosystem. ",
 					answer_id: 'dev-2-a-2',
-					value: 28,
+					value: 23,
 				},
 				{
 					answer: "This contribution adds some value to the project and/or open source ecosystem.",
 					answer_id: 'dev-2-a-3',
-					value: 17.5,
+					value: 12.5,
 				},
 				{
 					answer: "This contribution hold no value and is insignificant in impact. ",

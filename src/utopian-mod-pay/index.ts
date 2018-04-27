@@ -53,6 +53,10 @@ conn.once('open', async () => {
 
       assert(UTOPIAN_ACCOUNT, 'missing utopian account');
       assert(POSTER_ACCOUNT, 'missing poster account');
+
+      console.log("UTOPIAN TOKEN", UTOPIAN_TOKEN);
+      console.log("POSTER TOKEN", POSTER_TOKEN);
+
       await run();
     } catch(e) {
       console.log('Error running pay script', e);

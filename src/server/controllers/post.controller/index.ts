@@ -153,6 +153,7 @@ async function update(req, res, next) {
     const pending = getBoolean(req.body.pending);
     const reviewed = getBoolean(req.body.reviewed);
     const staff_pick = getBoolean(req.body.staff_pick);
+    const staff_pick_by = moderator;
     const contribType = req.body.type || null;
     const repo = req.body.repository || null;
     const tags = req.body.tags || null;
@@ -190,8 +191,11 @@ async function update(req, res, next) {
 
             if (repo) post.json_metadata.repository = repo;
             if (tags) post.json_metadata.tags = tags;
-            if (moderator) post.json_metadata.moderator.account = moderator;
-            if (staff_pick) post.json_metadata.staff_pick = true;
+            if (moderator && !staff_pick) post.json_metadata.moderator.account = moderator;
+            if (staff_pick) {
+                post.json_metadata.staff_pick = true;
+                post.json_metadata.staff_pick_by = moderator;
+            }
 
             if (reviewed) {
                 post.json_metadata.moderator.time = new Date().toISOString();
@@ -283,8 +287,11 @@ async function update(req, res, next) {
             }
             if (repo) post.markModified('json_metadata.repository');
             if (tags) post.markModified('json_metadata.tags');
-            if (moderator) post.markModified('json_metadata.moderator');
-            if (staff_pick) post.markModified('json_metadata.staff_pick');
+            if (moderator && !staff_pick) post.markModified('json_metadata.moderator');
+            if (staff_pick) {
+                post.markModified('json_metadata.staff_pick');
+                post.markModified('json_metadata.staff_pick_by');
+            }
 
             const savedPost = await post.save();
             sendPost(res, savedPost);

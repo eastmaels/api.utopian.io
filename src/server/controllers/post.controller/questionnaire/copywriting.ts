@@ -22,7 +22,7 @@ export default {
 				{
 					answer: "Very Short (less than 200 words in total).",
 					answer_id: 'copy-1-a-4',
-					value: 0,
+					value: 5,
 				}],
 		},
 		{

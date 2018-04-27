@@ -16,12 +16,12 @@ export default {
 				},
 				{
 					answer: "Minor",
-					answer_id: 'bug-1-a-2',
+					answer_id: 'bug-1-a-3',
 					value: 29,
 				},
 				{
 					answer: "Trivial",
-					answer_id: 'bug-1-a-3',
+					answer_id: 'bug-1-a-4',
 					value: 0,
 				}
 			],
@@ -85,17 +85,17 @@ export default {
 				{
 					answer: "The bug was a very common occurrence and impacted the end user experience significantly.",
 					answer_id: 'bug-4-a-1',
-					value: 10,
+					value: 7.5,
 				},
 				{
 					answer: "The bug was relatively common, but avoidable.",
 					answer_id: 'bug-4-a-2',
-					value: 9,
+					value: 6,
 				},
 				{
 					answer: "The bug was very rare but impactful.",
 					answer_id: 'bug-4-a-3',
-					value: 5,
+					value: 3,
 				},
 				{
 					answer: "The bug was nearly impossible to encounter without actively looking for it.",

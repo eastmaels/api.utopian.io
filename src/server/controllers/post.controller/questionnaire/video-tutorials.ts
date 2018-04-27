@@ -12,7 +12,7 @@ export default {
                 {
                     answer: "2-3 substantial concepts covered in the tutorial.",
                     answer_id: 'vtuts-1-a-2',
-                    value: 7,
+                    value: 5,
                 },
                 {
                     answer: "1 substantial concept covered in the tutorial.",
@@ -33,17 +33,17 @@ export default {
                 {
                     answer: "Exceptionally good text and, when applicable, images for concepts covered.",
                     answer_id: 'vtuts-2-a-1',
-                    value: 20,
+                    value: 10,
                 },
                 {
                     answer: "Thorough text and, if applicable, images for concepts covered.",
                     answer_id: 'vtuts-2-a-2',
-                    value: 18,
+                    value: 5,
                 },
                 {
                     answer: "Minimal text and images.",
                     answer_id: 'vtuts-2-a-3',
-                    value: 10,
+                    value: 3,
                 },
                 {
                     answer: "No or very little text and images.",
@@ -116,7 +116,7 @@ export default {
                 {
                     answer: "The sound is clear and understandable with complimenting background music / sounds.",
                     answer_id: 'vtuts-5-a-2',
-                    value: 8,
+                    value: 7,
                 },
                 {
                     answer: "Low quality of sound and/or mildly distracting background noise.",
@@ -142,12 +142,12 @@ export default {
                 {
                     answer: "Yes, the voice-over is easy to understand.",
                     answer_id: 'vtuts-6-a-2',
-                    value: 8,
+                    value: 7,
                 },
                 {
                     answer: "Only some of the voice-over was comprehensible.",
                     answer_id: 'vtuts-6-a-3',
-                    value: 4,
+                    value: 2,
                 },
                 {
                     answer: "The voice-over was impossible to understand / not included at all.",

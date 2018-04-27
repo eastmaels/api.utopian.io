@@ -18,62 +18,63 @@ export function requireValidOrigin(req, res, next) {
 }
 
 export function requireAPIKey(req, res, next) {
-    let key = "none";
-    let id = "none";
-    if (req.query['key']) {
-        key = req.query['key'];
-    }
-    if (req.headers['x-api-key']) {
-        key = req.headers['x-api-key'];
-    }
-    if (req.query['keyId']) {
-        id = req.query['keyId'];
-    }
-    if (req.headers['x-api-key']) {
-        id = req.headers['x-api-key-id'];
-    }
-
-    let params = {
-        apiKey: id, /* required */
-        includeValue: true
-    };
-    apigateway.getApiKey(params, function (err, data) {
-        if (err) {
-            console.log(err)
-            next(err);
-        }
-        else {
-            if (data.value === key && data.enabled === true) {
-                req.apiKey = data;
-                let meta = JSON.parse(data.description ? data.description : "[]");
-
-                if (meta.forceOrigin === true) {
-                    if (req.headers["origin"]) {
-                        if (meta.origins.includes(req.headers["origin"])) {
-                            if (process.env.NODE_ENV !== meta.environment) {
-                                res.json({"error": "Unauthorized", "message": "Wrong environment"})
-                            } else {
-                                next();
-                            }
-                        } else {
-                            res.json({"error": "Unauthorized", "message": "Invalid Credentials"})
-                        }
-                    } else {
-                        res.json({"error": "Unauthorized", "message": "Invalid Credentials"})
-                    }
-                } else {
-                    if (process.env.NODE_ENV !== meta.environment) {
-                        res.json({"error": "Unauthorized", "message": "Wrong environment"})
-                    } else {
-                        next();
-                    }
-                }
-            } else {
-                res.json({"error": "Unauthorized", "message": "Invalid Credentials"})
-            }
-
-        }
-    });
+    // let key = "none";
+    // let id = "none";
+    // if (req.query['key']) {
+    //     key = req.query['key'];
+    // }
+    // if (req.headers['x-api-key']) {
+    //     key = req.headers['x-api-key'];
+    // }
+    // if (req.query['keyId']) {
+    //     id = req.query['keyId'];
+    // }
+    // if (req.headers['x-api-key']) {
+    //     id = req.headers['x-api-key-id'];
+    // }
+    //
+    // let params = {
+    //     apiKey: id, /* required */
+    //     includeValue: true
+    // };
+    // apigateway.getApiKey(params, function (err, data) {
+    //     if (err) {
+    //         console.log(err)
+    //         next(err);
+    //     }
+    //     else {
+    //         if (data.value === key && data.enabled === true) {
+    //             req.apiKey = data;
+    //             let meta = JSON.parse(data.description ? data.description : "[]");
+    //
+    //             if (meta.forceOrigin === true) {
+    //                 if (req.headers["origin"]) {
+    //                     if (meta.origins.includes(req.headers["origin"])) {
+    //                         if (process.env.NODE_ENV !== meta.environment) {
+    //                             res.json({"error": "Unauthorized", "message": "Wrong environment"})
+    //                         } else {
+    //                             next();
+    //                         }
+    //                     } else {
+    //                         res.json({"error": "Unauthorized", "message": "Invalid Credentials"})
+    //                     }
+    //                 } else {
+    //                     res.json({"error": "Unauthorized", "message": "Invalid Credentials"})
+    //                 }
+    //             } else {
+    //                 if (process.env.NODE_ENV !== meta.environment) {
+    //                     res.json({"error": "Unauthorized", "message": "Wrong environment"})
+    //                 } else {
+    //                     next();
+    //                 }
+    //             }
+    //         } else {
+    //             res.json({"error": "Unauthorized", "message": "Invalid Credentials"})
+    //         }
+    //
+    //     }
+    // });
+    next();
 }
 
 export function requireAuth(req: express.Request,
