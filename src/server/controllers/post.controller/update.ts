@@ -52,6 +52,7 @@ export function updatePost(post: any, updatedPost: any): any {
   updatedPost.json_metadata.score = post.json_metadata.score;
   updatedPost.json_metadata.total_influence = post.json_metadata.total_influence;
   updatedPost.json_metadata.staff_pick = post.json_metadata.staff_pick;
+  updatedPost.json_metadata.staff_pick_by = post.json_metadata.staff_pick_by;
   updatedPost.json_metadata.config = post.json_metadata.config || questionnaire[post.json_metadata.type]
 
   Object.assign(post, updatedPost);
@@ -113,7 +114,7 @@ export async function validateNewPost(post: any,
   if (checkModerated && meta.score) return false;
 
   // New posts can't be staff picked
-  if (checkModerated && meta.staff_pick) return false;
+  if (checkModerated && (meta.staff_pick || meta.staff_pick_by)) return false;
 
   if (!existingPost) {
     const beneficiary = R.find(R.propEq('account', 'utopian.pay'))(post.beneficiaries);

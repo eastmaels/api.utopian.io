@@ -41,9 +41,11 @@ export async function prepareSteemConnect() {
   const refreshToken = process.env.REFRESH_TOKEN;
   const secret = process.env.CLIENT_SECRET;
 
+  console.log("info", "contacting SC");
+
   return new Promise((resolve, reject) => {
     request
-        .get(`${scBase}/api/oauth2/token?refresh_token=${refreshToken}&client_secret=${secret}&scope=vote,comment,comment_delete,comment_options,custom_json,claim_reward_balance,offline`)
+        .get(`${scBase}/api/oauth2/token?refresh_token=${refreshToken}&client_secret=${secret}&scope=vote,comment,delete_comment,comment_options,custom_json,claim_reward_balance,offline`)
         .end((err, res) => {
           if (!res.body.access_token) {
             console.log("error", "Could not get access token", res);
@@ -80,7 +82,7 @@ export function processPost (post) {
   };
 
   if (staff_pick) {
-    postConfig.voting_power = MaxVote;
+    postConfig.voting_power = MaxVote * 100;
   }
 
   if (!staff_pick && score) {
@@ -94,7 +96,7 @@ export function processPost (post) {
   commentBody += `We hope you will take the time to share your expertise and knowledge by rating contributions made by others on Utopian.io to help us reward the best contributions together.\n`;
   commentBody += '#### Utopian Witness!\n';
   commentBody += '<a href="https://v2.steemconnect.com/sign/account-witness-vote?witness=utopian-io&approve=1">Vote for Utopian Witness!</a> We are made of developers, system administrators, entrepreneurs, artists, content creators, thinkers. We embrace every nationality, mindset and belief.\n';
-  commentBody += '\n**Want to chat? Join us on Discord https://discord.gg/Pc8HG9x**';
+  commentBody += '\n**Want to chat? Join us on Discord https://discord.me/utopian-io**';
 
   postConfig.comment = commentBody;
 

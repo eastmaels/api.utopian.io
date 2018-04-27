@@ -1,57 +1,52 @@
 export default {
 	questions: [
 		{
-			question: "How would you classify this copywriting work?",
+			question: "What is the volume of the work submitted?",
 			question_id: 'copy-1',
 			answers: [
 				{
-					answer: "Extended (at least 1,500 words in total).",
-					answer_id: 1,
-					value: 20,
-				},
-				{
-					answer: "Long (at least 800 words in total).",
-					answer_id: 2,
-					value: 15,
+					answer: "Long (at least 1,000 words in total).",
+					answer_id: 'copy-1-a-1',
+					value: 25,
 				},
 				{
 					answer: "Medium (at least 400 words in total).",
-					answer_id: 3,
+					answer_id: 'copy-1-a-2',
+					value: 15,
+				},
+				{
+					answer: "Short (at least 200 words in total).",
+					answer_id: 'copy-1-a-3',
 					value: 10,
 				},
 				{
-					answer: "Short (at least 100 words in total).",
-					answer_id: 4,
+					answer: "Very Short (less than 200 words in total).",
+					answer_id: 'copy-1-a-4',
 					value: 5,
-				},
-				{
-					answer: "Minimal (less than 100 words in total).",
-					answer_id: 5,
-					value: 0,
 				}],
 		},
 		{
-			question: "How is the grammar and style of the content?",
+			question: "How would you rate the grammar and style of the content?",
 			question_id: 'copy-2',
 			answers: [
 				{
 					answer: "Polished and well-written.",
-					answer_id: 1,
+					answer_id: 'copy-2-a-1',
 					value: 10,
 				},
 				{
 					answer: "Good, but has room for improvement.",
-					answer_id: 2,
-					value: 5,
+					answer_id: 'copy-2-a-2',
+					value: 7,
 				},
 				{
-					answer: "Has a few errors that need to be corrected or lacks consistency of style.",
-					answer_id: 3,
-					value: 2,
+					answer: "Has a few errors that need to be corrected.",
+					answer_id: 'copy-2-a-3',
+					value: 3,
 				},
 				{
 					answer: "It’s quite bad.",
-					answer_id: 4,
+					answer_id: 'copy-2-a-4',
 					value: 0,
 				}],
 		},
@@ -61,34 +56,74 @@ export default {
 			answers: [
 				{
 					answer: "Highly relevant and valuable.",
-					answer_id: 1,
+					answer_id: 'copy-3-a-1',
 					value: 10,
 				},
 				{
-					answer: "Relevant but offers little unique value",
-					answer_id: 2,
-					value: 5,
+					answer: "Relevant but offers little unique value.",
+					answer_id: 'copy-3-a-2',
+					value: 7,
+				},
+				{
+					answer: "Somewhat relevant.",
+					answer_id: 'copy-3-a-3',
+					value: 3,
 				},
 				{
 					answer: "Does not adequately meet the project’s needs.",
-					answer_id: 3,
+					answer_id: 'copy-3-a-4',
 					value: 0,
 				}],
 		},
 		{
-			question: "Has the content been adopted by the Project Owner (i.e. merged pull requests or content is now used)?",
+			question: "Overall, how readable or comprehensible is the content?",
 			question_id: 'copy-4',
 			answers: [
 				{
-					answer: "Yes, the content is now being used by the Project Owner.",
-					answer_id: 1,
+					answer: "It reads well and is easy to understand.",
+					answer_id: 'copy-4-a-1',
 					value: 10,
 				},
 				{
-					answer: "No, the content has not been used yet.",
-					answer_id: 2,
+					answer: "It is understandable, but it could be improved.",
+					answer_id: 'copy-4-a-2',
+					value: 8,
+				},
+				{
+					answer: "Some parts are hard to understand.",
+					answer_id: 'copy-4-a-3',
+					value: 4,
+				},
+				{
+					answer: "A lot of it is hard to understand.",
+					answer_id: 'copy-4-a-4',
 					value: 0,
-				},],
+				}],
+		},
+		{
+			question: "Did the content fulfill the specific needs presented by the project owner?",
+			question_id: 'copy-5',
+			answers: [
+				{
+					answer: "Yes, the content exceeded all specified requirements.",
+					answer_id: 'copy-5-a-1',
+					value: 10,
+				},
+				{
+					answer: "Yes, all the requirements were fulfilled.",
+					answer_id: 'copy-5-a-2',
+					value: 9,
+				},
+				{
+					answer: "Some of the less important requirements were left out.",
+					answer_id: 'copy-5-a-3',
+					value: 3,
+				},
+				{
+					answer: "Not all important requirements were addressed.",
+					answer_id: 'copy-5-a-4',
+					value: 0,
+				}],
 		},
 	]
 };

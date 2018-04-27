@@ -5,7 +5,7 @@ Utopian wants to reward Open Source contributors for their hard work.
 See our sister project (the frontend of Utopian) built in `REACT.js` [here](https://github.com/utopian-io/utopian.io)!
 
 ## Contributing
-Get in touch on Discord: https://discord.gg/Pc8HG9x
+Get in touch on Discord: https://discord.me/utopian-io
 
 ### Run a MongoDB Instance
 Create a database named utopian-io

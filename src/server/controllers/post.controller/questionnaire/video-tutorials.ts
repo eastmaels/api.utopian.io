@@ -1,121 +1,185 @@
 export default {
     questions: [
         {
-            question: "Does the tutorial address a minimum of 3 substantial concepts and no more than 5?",
-            question_id: 'vtut-1',
+            question: "How many substantial concepts does this tutorial address?",
+            question_id: 'vtuts-1',
             answers: [
                 {
-                    answer: "3-5 substantial concepts covered in the tutorial.",
-                    answer_id: 1,
+                    answer: "4-5 substantial concepts covered in the tutorial.",
+                    answer_id: 'vtuts-1-a-1',
                     value: 10,
                 },
                 {
-                    answer: "Less than 3 or more than 5 substantial concepts covered in the tutorial.",
-                    answer_id: 2,
+                    answer: "2-3 substantial concepts covered in the tutorial.",
+                    answer_id: 'vtuts-1-a-2',
                     value: 5,
                 },
                 {
-                    answer: "No substantial or recognisable concepts.",
-                    answer_id: 3,
+                    answer: "1 substantial concept covered in the tutorial.",
+                    answer_id: 'vtuts-1-a-3',
+                    value: 2,
+                },
+                {
+                    answer: "More than 5 substantial concepts covered in the tutorial.",
+                    answer_id: 'vtuts-1-a-4',
                     value: 0,
-                }],
+                },
+            ],
         },
         {
-            question: "Concepts covered in the tutorial are indicated in the post text with a short description of each concept and when appropriate, images?",
-            question_id: 'vtut-2',
+            question: "How informative is the content included alongside the video?",
+            question_id: 'vtuts-2',
             answers: [
                 {
-                    answer: "Thorough text and images for concepts covered.",
-                    answer_id: 1,
+                    answer: "Exceptionally good text and, when applicable, images for concepts covered.",
+                    answer_id: 'vtuts-2-a-1',
+                    value: 10,
+                },
+                {
+                    answer: "Thorough text and, if applicable, images for concepts covered.",
+                    answer_id: 'vtuts-2-a-2',
                     value: 5,
                 },
                 {
                     answer: "Minimal text and images.",
-                    answer_id: 2,
-                    value: 2,
+                    answer_id: 'vtuts-2-a-3',
+                    value: 3,
                 },
                 {
                     answer: "No or very little text and images.",
-                    answer_id: 3,
+                    answer_id: 'vtuts-2-a-4',
                     value: 0,
-                }],
+                },
+            ],
+        },
+        {
+            question: "Is the video clearly prepared and structured?",
+            question_id: 'vtuts-3',
+            answers: [
+                {
+                    answer: "Both the presenter and the video are exceptionally organized, structured and presented",
+                    answer_id: 'vtuts-3-a-1',
+                    value: 20,
+                },
+                {
+                    answer: "Presenter is prepared and video concepts are structured.",
+                    answer_id: 'vtuts-3-a-2',
+                    value: 16,
+                },
+                {
+                    answer: "Presenter has moments when he/she seems unprepared and/or the content seems to be unstructured.",
+                    answer_id: 'vtuts-3-a-3',
+                    value: 8,
+                },
+                {
+                    answer: "Presenter seems unprepared and/or video is unstructured.",
+                    answer_id: 'vtuts-3-a-4',
+                    value: 0,
+                },
+            ],
         },
         {
             question: "Does the contributor provide supplementary resources, such as code and sample files in the contribution post or a GitHub repository?",
-            question_id: "vtut-3",
+            question_id: 'vtuts-4',
             answers: [
                 {
-                    answer: "Yes",
-                    answer_id: 1,
-                    value: 10,
-                },
-                {
-                    answer: "No",
-                    answer_id: 2,
-                    value: 0,
-                }],
-        },
-        {
-            question: "Is the tutorial part of a series?",
-            question_id: "vtut-4",
-            answers: [
-                {
-                    answer: "Yes.",
-                    answer_id: 1,
-                    value: 10,
-                },
-                {
-                    answer: "Yes, but first entry in the series.",
-                    answer_id: 2,
+                    answer: "Contributor provided exceptional supplementary resources.",
+                    answer_id: 'vtuts-4-a-1',
                     value: 5,
                 },
                 {
-                    answer: "No.",
-                    answer_id: 3,
+                    answer: "Contributor provided good supplementary resources.",
+                    answer_id: 'vtuts-4-a-2',
+                    value: 4,
+                },
+                {
+                    answer: "Contributor provided minimal supplementary resources.",
+                    answer_id: 'vtuts-4-a-3',
+                    value: 1.5,
+                },
+                {
+                    answer: "No supplementary resources were provided.",
+                    answer_id: 'vtuts-4-a-4',
                     value: 0,
-                }
+                },
             ],
         },
         {
-            question: "Is there an outline for the tutorial content at the beginning of the post?",
-            question_id: "vtut-5",
+            question: "How would you describe the sound quality of the video?",
+            question_id: 'vtuts-5',
             answers: [
                 {
-                    answer: "Yes.",
-                    answer_id: 1,
-                    value: 5,
+                    answer: "Sound quality is excellent and sounds professionally produced.",
+                    answer_id: 'vtuts-5-a-1',
+                    value: 10,
                 },
                 {
-                    answer: "Yes, but not detailed enough or does not cover all sections.",
-                    answer_id: 2,
+                    answer: "The sound is clear and understandable with complimenting background music / sounds.",
+                    answer_id: 'vtuts-5-a-2',
+                    value: 7,
+                },
+                {
+                    answer: "Low quality of sound and/or mildly distracting background noise.",
+                    answer_id: 'vtuts-5-a-3',
+                    value: 3,
+                },
+                {
+                    answer: "Distracting background noise and/or very low quality recording.",
+                    answer_id: 'vtuts-5-a-4',
+                    value: 0,
+                },
+            ],
+        },
+        {
+            question: "Does the presenter speak clearly and is easy to understand?",
+            question_id: 'vtuts-6',
+            answers: [
+                {
+                    answer: "Yes, presenter’s speech is highly engaging and professional.",
+                    answer_id: 'vtuts-6-a-1',
+                    value: 10,
+                },
+                {
+                    answer: "Yes, the voice-over is easy to understand.",
+                    answer_id: 'vtuts-6-a-2',
+                    value: 7,
+                },
+                {
+                    answer: "Only some of the voice-over was comprehensible.",
+                    answer_id: 'vtuts-6-a-3',
                     value: 2,
                 },
                 {
-                    answer: "No.",
-                    answer_id: 3,
+                    answer: "The voice-over was impossible to understand / not included at all.",
+                    answer_id: 'vtuts-6-a-4',
                     value: 0,
-                }
+                },
             ],
         },
         {
-            question: "Does the presenter speak clearly and is easily understandable?",
-            question_id: "vtut-6",
+            question: "Are the title of the tutorial and the concepts being covered present on the video in text overlay form?",
+            question_id: 'vtuts-7',
             answers: [
                 {
-                    answer: "Yes.",
-                    answer_id: 1,
-                    value: 10,
-                },
-                {
-                    answer: "Mostly understandable.",
-                    answer_id: 2,
+                    answer: "Title and concepts covered are present in the video at all times in a non-disruptive way.",
+                    answer_id: 'vtuts-7-a-1',
                     value: 5,
                 },
                 {
-                    answer: "No.",
-                    answer_id: 3,
+                    answer: "Title and concepts covered appear temporarily when they are addressed.",
+                    answer_id: 'vtuts-7-a-2',
+                    value: 4.5,
+                },
+                {
+                    answer: "Only the title is presented and the concepts shown are not addressed in overlay text.",
+                    answer_id: 'vtuts-7-a-3',
+                    value: 2,
+                },
+                {
+                    answer: "Neither title nor concepts covered are presented in the video text overlay.",
+                    answer_id: 'vtuts-7-a-4',
                     value: 0,
-                }
+                },
             ],
         },
     ]

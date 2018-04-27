@@ -58,7 +58,8 @@ async function processPost(post: any, index: number): Promise<void> {
     if (!(chainPost.author && chainPost.permlink)) {
       console.log('REMOVING DELETED POST');
       if (!TEST) {
-        return await post.remove();
+        post.deleted = true;
+        return await post.save();
       }
     }
 

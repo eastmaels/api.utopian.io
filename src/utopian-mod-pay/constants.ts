@@ -62,34 +62,34 @@ export const CATEGORY_VALUE: { [key: string]: CategoryValue } = {
   },
   'task-ideas': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   },
   'task-development': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   },
   'task-bug-hunting': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   },
   'task-translations': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   },
   'task-graphics': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   },
   'task-documentation': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   },
   'task-analysis': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   },
   'task-social': {
     reviewed: 1.25,
-    reviewed: 1.25,
+    flagged: 1.25,
   }
 };

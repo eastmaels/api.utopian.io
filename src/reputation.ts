@@ -227,6 +227,11 @@ async function processReputation(user: any, score: any, topScore: number): Promi
             influence = levels[user.honor_reputation].influence;
         }
 
+        if(user.forced_reputation) {
+            level = levels[user.forced_reputation].name;
+            influence = levels[user.forced_reputation].influence;
+        }
+
         user.reputation = level;
         user.influence = influence;
 

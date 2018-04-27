@@ -79,6 +79,10 @@ const UserSchema = new mongoose.Schema({
     type: Number,
     default: 0,
   },
+  forced_reputation: {
+    type: Number,
+    default: 0,
+  },
   score: {
     type: Number,
     default: 0,

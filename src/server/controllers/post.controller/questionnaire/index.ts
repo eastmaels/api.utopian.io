@@ -24,7 +24,6 @@ const questionnaire = {
 	'development': {
 		questions: [
 			...developmentQuestions.questions,
-			...common.questions,
 		]
 	}, // Done
 	'graphics': {
@@ -84,55 +83,46 @@ const questionnaire = {
 	'blog': {
 		questions: [
 			...blogQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-ideas': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-development': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-bug-hunting': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-documentation': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-translations': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-analysis': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-graphics': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 	'task-social': {
 		questions: [
 			...taskRequestQuestions.questions,
-			...common.questions,
 		]
 	},
 };
